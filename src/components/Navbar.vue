@@ -1,0 +1,102 @@
+<template>
+  <div class="navbar">
+    <ul class="nav nav-mobile container">
+      <li class="nav-item nav-brand">
+        <span class="nav-brand-unify">Unify</span>
+      </li>
+      <li class="nav-item nav-icon nav-seperated">
+        <font-awesome-icon icon="globe-asia" size="lg" />
+      </li>
+      <li class="nav-item nav-icon">
+        <font-awesome-icon icon="bars" size="lg" />
+      </li>
+    </ul>
+    <ul class="nav nav-desktop container">
+      <li class="nav-item nav-brand">
+        <router-link to="/" class="nav-brand-unify">Unify</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/about" class="nav-link">{{ $t("navbar.about") }}</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/activities" class="nav-link">{{ $t("navbar.activities") }}</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/contact" class="nav-link">{{ $t("navbar.contact") }}</router-link>
+      </li>
+      <li class="nav-item nav-icon nav-seperated">
+        <font-awesome-icon icon="globe-asia" size="lg" />
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Navbar',
+};
+</script>
+
+<style lang="scss" scoped>
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: 5rem;
+  width: 100%;
+
+  position: fixed;
+  top: 0; left: 0;
+
+  background-color: #fff;
+  box-shadow: 0 3px 20px 5px rgba(0, 0, 0, 0.1);
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+
+    padding-right: $standard-padding;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-item {
+    padding-left: $standard-padding;
+  }
+
+  .nav-item a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .nav-brand {
+    font-family: 'Butterfly';
+    font-size: $large-font-size;
+    font-weight: 400;
+  }
+
+  .nav-link {
+    font-size: $small-font-size;
+    font-weight: 400;
+  }
+
+  .nav-seperated {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 800px) {
+    .nav-mobile {
+      display: none;
+    }
+
+    .nav-desktop {
+      display: flex;
+    }
+  }
+}
+</style>
