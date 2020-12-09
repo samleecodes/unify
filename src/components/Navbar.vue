@@ -4,9 +4,7 @@
       <li class="nav-item nav-brand">
         <span class="nav-brand-unify">Unify</span>
       </li>
-      <li class="nav-item nav-icon nav-seperated">
-        <font-awesome-icon icon="globe-asia" size="lg" />
-      </li>
+      <LocaleChanger />
       <li class="nav-item nav-icon">
         <font-awesome-icon icon="bars" size="lg" />
       </li>
@@ -24,16 +22,19 @@
       <li class="nav-item">
         <router-link to="/contact" class="nav-link">{{ $t("navbar.contact") }}</router-link>
       </li>
-      <li class="nav-item nav-icon nav-seperated">
-        <font-awesome-icon icon="globe-asia" size="lg" />
-      </li>
+      <LocaleChanger />
     </ul>
   </div>
 </template>
 
 <script>
+import LocaleChanger from '@/components/LocaleChanger.vue';
+
 export default {
   name: 'Navbar',
+  components: {
+    LocaleChanger,
+  },
 };
 </script>
 
