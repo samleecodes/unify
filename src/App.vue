@@ -15,6 +15,12 @@ export default {
     Navbar,
     Footer,
   },
+  watch: {
+    // eslint-disable-next-line func-names
+    $route() {
+      window.scrollTo(0, 0);
+    },
+  },
 };
 </script>
 
