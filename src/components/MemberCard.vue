@@ -75,7 +75,7 @@ export default {
 
   .member-card-content {
     .member-card-content-name {
-      font-size: $large-font-size;
+      font-size: $content-font-size;
       font-weight: 700;
     }
 
