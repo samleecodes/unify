@@ -12,6 +12,18 @@
           icon="times" size="lg" />
         </div>
         <div class="mobile-menu-content">
+          <div
+          @click="menuOpen = false"
+          v-for="menuItem in menuItems"
+          :key="menuItem.dest"
+          class="mobile-menu-item">
+            <router-link
+            :to="menuItem.dest"
+            class="mobile-menu-item-link">
+              {{ menuItem.name }}
+            </router-link>
+            <hr class="mobile-menu-item-seperator" />
+          </div>
         </div>
       </div>
     </div>
@@ -24,6 +36,24 @@ export default {
   data() {
     return {
       menuOpen: false,
+      menuItems: [
+        {
+          name: this.$t('navbar.home'),
+          dest: '/',
+        },
+        {
+          name: this.$t('navbar.about'),
+          dest: '/about',
+        },
+        {
+          name: this.$t('navbar.activities'),
+          dest: '/activities',
+        },
+        {
+          name: this.$t('navbar.contact'),
+          dest: '/contact',
+        },
+      ],
     };
   },
 };
@@ -62,10 +92,33 @@ export default {
 
       width: 100%;
 
+      margin-bottom: $small-margin;
+
       .mobile-menu-title {
         font-size: $large-font-size;
         font-weight: 700;
         text-align: left;
+      }
+    }
+
+    .mobile-menu-content {
+      width: 100%;
+
+      .mobile-menu-item {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+
+        margin-bottom: $line-margin;
+
+        .mobile-menu-item-link {
+          font-size: $content-font-size;
+          font-weight: 400;
+
+          text-decoration: none;
+          color: #000000;
+        }
       }
     }
   }
