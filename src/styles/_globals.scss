@@ -11,6 +11,9 @@
 }
 
 article {
+  display: flex;
+  flex-direction: column;
+
   padding: $standard-padding;
 
   h1 {
@@ -25,9 +28,9 @@ article {
 
   img {
     display: block;
-    max-width: 300px;
+    // max-width: 300px;
     width: 100%;
-    margin: auto;
+    margin-bottom: $line-margin;
   }
 }
 
