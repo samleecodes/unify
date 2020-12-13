@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Navbar />
-    <router-view id="content-view"/>
+    <transition name="slide" mode="out-in">
+      <router-view id="content-view"/>
+    </transition>
     <Footer id="footer" />
   </div>
 </template>
@@ -42,5 +44,35 @@ export default {
 
 #content-view {
   margin-top: 5rem;
+}
+
+.slide-enter-active {
+  animation: slide-in .3s;
+}
+
+.slide-leave-active {
+  animation: slide-out .3s;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
 }
 </style>
