@@ -1,8 +1,12 @@
 {
+  "common": {
+    "search": "Search"
+  },
   "navbar": {
     "home": "Home",
     "about": "About",
     "activities": "Activites",
-    "contact": "Contact"
+    "contact": "Contact",
+    "welfare": "Welfare"
   }
 }

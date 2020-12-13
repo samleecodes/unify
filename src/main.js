@@ -5,7 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+import initFirebase from './firebase';
 import i18n from './i18n';
+
+initFirebase();
 
 library.add(faBars);
 library.add(faGlobeAsia);

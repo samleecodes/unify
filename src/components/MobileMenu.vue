@@ -53,6 +53,10 @@ export default {
           name: this.$t('navbar.contact'),
           dest: '/contact',
         },
+        {
+          name: this.$t('navbar.welfare'),
+          dest: '/welfare',
+        },
       ],
     };
   },
