@@ -66,7 +66,7 @@ export default {
   }
 
   textarea {
-    font-family: 'Avenir', sans-serif;
+    font-family: 'Lato', 'Avenir', sans-serif;
     padding: $small-padding;
     font-size: $content-font-size;
     height: 12rem;
@@ -77,7 +77,7 @@ export default {
   button {
     margin-top: $small-margin;
 
-    font-family: 'Avenir', sans-serif;
+    font-family: 'Lato', 'Avenir', sans-serif;
 
     display: inline-block;
 

@@ -52,6 +52,9 @@ export default {
     }
 
     .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       width: 60%;
     }
   }

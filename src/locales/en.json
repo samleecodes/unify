@@ -18,12 +18,38 @@
   "about": {
     "aboutTitle": "About Unify",
     "manifestoTitle": "Manifesto",
-    "enlarge": "Enlarge"
+    "enlarge": "Enlarge",
+    "membersTitle": "Union members"
   },
   "contact": {
     "yourMessage": "Your message",
     "submit": "Submit",
     "submitting": "Submitted",
     "submitted": "Successfully submitted your message!"
+  },
+  "members": {
+    "bertha": "Lam Tsz Ying Bertha",
+    "cherie": "Leung King Yan Cherie",
+    "sophia": "Ip Sum Yu Sophia",
+    "wayne": "Chan Ching Wai Wayne",
+    "amy": "Wong Cheuk Hei Amy",
+    "joyce": "Wu Wing Yan Joyce",
+    "sameer": "Niaz Mohammad Sameer",
+    "julian": "Kwok Kwun Yi Julian",
+    "oscar": "Chan Sze Hin Oscar",
+    "toseef": "Toseef Mahmood",
+    "nicole": "Lee Wing Hei Nicole",
+    "sharoz": "Khan Mohammad Sharoz"
+  },
+  "roles": {
+    "chairPerson": "Chairperson",
+    "vChairPerson": "Vice Chairperson",
+    "secretary": "General Secretary",
+    "treasurer": "Treasurer",
+    "recreation": "Recreational Secretary",
+    "genAffairs": "General Affairs Officer",
+    "arts": "Arts Director",
+    "academics": "Academic Secretary",
+    "sports": "Sports Secretary"
   }
 }
