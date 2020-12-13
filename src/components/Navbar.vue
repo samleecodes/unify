@@ -5,9 +5,7 @@
         <span class="nav-brand-unify">Unify</span>
       </li>
       <LocaleChanger />
-      <li class="nav-item nav-icon">
-        <font-awesome-icon icon="bars" size="lg" />
-      </li>
+      <MobileMenu />
     </ul>
     <ul class="nav nav-desktop container">
       <li class="nav-item nav-brand">
@@ -29,11 +27,13 @@
 
 <script>
 import LocaleChanger from '@/components/LocaleChanger.vue';
+import MobileMenu from '@/components/MobileMenu.vue';
 
 export default {
   name: 'Navbar',
   components: {
     LocaleChanger,
+    MobileMenu,
   },
 };
 </script>

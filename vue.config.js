@@ -8,17 +8,17 @@ module.exports = {
   },
 
   chainWebpack: (config) => {
-    config.module
-      .rule('url-loader')
-      .test(/\.(png|jpg|JPG|gif)$/)
-      .use('url-loader')
-      .loader('url-loader?mimetype=image/png')
-      .end()
-      .rule('file-loader')
-      .test(/\.(ttf|otf|eot|woff|woff2)$/)
-      .use('file-loader')
-      .loader('file-loader')
-      .end();
+    const imgRule = config.module.rule('images');
+    imgRule.use('file-loader')
+      .loader('image-webpack-loader')
+      .tap((options) => {
+        const ret = options || {};
+        ret.pngquant = {
+          quality: [0.65, 0.9],
+          speed: 4,
+        };
+        return ret;
+      });
   },
 
   pluginOptions: {

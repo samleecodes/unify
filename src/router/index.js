@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Index from '../views/Index.vue';
+import About from '../views/About.vue';
+import Activities from '../views/Activities.vue';
 
 Vue.use(VueRouter);
 
@@ -9,6 +11,16 @@ const routes = [
     path: '/',
     name: 'Index',
     component: Index,
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About,
+  },
+  {
+    path: '/activities',
+    name: 'Activities',
+    component: Activities,
   },
 ];
 

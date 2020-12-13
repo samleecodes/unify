@@ -6,7 +6,8 @@
     <div v-if="dialogOpen" class="locale-changer-container">
       <div class="locale-changer">
         <span class="locale-changer-title">
-          Select your language
+          Select your language<br/>
+          選擇你的語言
         </span>
         <div class="locale-changer-control">
           control
@@ -59,6 +60,7 @@ export default {
       font-size: $large-font-size;
       font-weight: 700;
       margin: $standard-margin;
+      text-align: center;
     }
   }
 }

@@ -25,7 +25,7 @@ export default {
   justify-content: center;
   align-items: center;
 
-  background-image: url('~@/assets/Clouds.JPG');
+  background-image: url('~@/assets/Clouds.jpg');
   background-size: cover;
   background-position: center;
 
