@@ -50,12 +50,12 @@ export default {
           dest: '/activities',
         },
         {
-          name: this.$t('navbar.contact'),
-          dest: '/contact',
-        },
-        {
           name: this.$t('navbar.welfare'),
           dest: '/welfare',
+        },
+        {
+          name: this.$t('navbar.contact'),
+          dest: '/contact',
         },
       ],
     };
