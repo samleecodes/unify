@@ -6,6 +6,9 @@
         <h1>{{ $t('about.aboutTitle') }}</h1>
         <p>{{ $t('index.intro') }}</p>
       </article>
+      <article>
+        <h1>{{ $t('about.membersTitle') }}</h1>
+      </article>
     </div>
   </div>
 </template>
