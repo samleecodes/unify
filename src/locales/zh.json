@@ -1,4 +1,7 @@
 {
+  "common": {
+    "search": "搜尋"
+  },
   "navbar": {
     "home": "首頁",
     "about": "簡介",

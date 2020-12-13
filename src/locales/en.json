@@ -1,4 +1,7 @@
 {
+  "common": {
+    "search": "Search"
+  },
   "navbar": {
     "home": "Home",
     "about": "About",

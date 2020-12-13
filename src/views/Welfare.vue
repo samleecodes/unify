@@ -7,7 +7,7 @@
           <input
           v-model="searchQuery"
           class="search-input"
-          placeholder="Search" />
+          :placeholder="$t('common.search')" />
         </div>
         <Loader v-if="loading" />
         <WelfareItem
@@ -98,8 +98,9 @@ export default {
   .search-input {
     width: 100%;
     padding: $line-padding;
-    border: 1px solid #000;
+    border: 1px solid rgb(87, 87, 87);
     border-radius: 5px;
+    font-size: $content-font-size;
   }
 }
 </style>
