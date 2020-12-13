@@ -26,5 +26,30 @@
     "submit": "提交",
     "submitting": "現在提交...",
     "submitted": "成功提交您的消息！"
+  },
+  "members": {
+    "bertha": "林梓瑩 Bertha",
+    "cherie": "梁景欣 Cherie",
+    "sophia": "葉心雨 Sophia",
+    "wayne": "陳正維 Wayne",
+    "amy": "黃芍熙 Amy",
+    "joyce": "胡詠恩 Joyce",
+    "sameer": "李心美 Sameer",
+    "julian": "郭冠皚 Julian",
+    "oscar": "陳司憲 Oscar",
+    "toseef": "馬東尼 Toseef",
+    "nicole": "李穎希 Nicole",
+    "sharoz": "巫家樂 Sharoz"
+  },
+  "roles": {
+    "chairPerson": "會長",
+    "vChairPerson": "副會長",
+    "secretary": "文書",
+    "treasurer": "財政",
+    "recreation": "康樂",
+    "genAffairs": "總務",
+    "arts": "美術",
+    "academics": "學術",
+    "sports": "體育"
   }
 }
