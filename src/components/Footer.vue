@@ -25,8 +25,6 @@ export default {
 
   clip-path: inset(-20px -20px 0 -20px);
 
-  flex-shrink: 0;
-
   .footer-title {
     font-size: $large-font-size;
     font-weight: 700;
