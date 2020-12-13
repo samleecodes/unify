@@ -97,7 +97,7 @@ export default {
   }
 
   .nav-brand {
-    font-family: 'Butterfly';
+    font-family: 'Butterfly' !important;
     font-size: $large-font-size;
     font-weight: 400;
   }
