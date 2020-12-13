@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .image-header {
-  height: 15rem;
+  height: 13rem;
   width: 100%;
 
   display: flex;
