@@ -38,12 +38,20 @@ export default {
       menuOpen: false,
       menuItems: [
         {
-          name: 'Test',
+          name: this.$t('navbar.home'),
           dest: '/',
         },
         {
-          name: 'Lol',
-          dest: '/activites',
+          name: this.$t('navbar.about'),
+          dest: '/about',
+        },
+        {
+          name: this.$t('navbar.activities'),
+          dest: '/activities',
+        },
+        {
+          name: this.$t('navbar.contact'),
+          dest: '/contact',
         },
       ],
     };
@@ -106,7 +114,7 @@ export default {
 
         .mobile-menu-item-link {
           font-size: $content-font-size;
-          font-weight: 500;
+          font-weight: 400;
 
           text-decoration: none;
           color: #000000;
