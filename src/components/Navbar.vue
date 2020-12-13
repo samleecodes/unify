@@ -11,14 +11,13 @@
       <li class="nav-item nav-brand">
         <router-link to="/" class="nav-brand-unify">Unify</router-link>
       </li>
-      <li class="nav-item">
-        <router-link to="/about" class="nav-link">{{ $t("navbar.about") }}</router-link>
-      </li>
-      <li class="nav-item">
-        <router-link to="/activities" class="nav-link">{{ $t("navbar.activities") }}</router-link>
-      </li>
-      <li class="nav-item">
-        <router-link to="/contact" class="nav-link">{{ $t("navbar.contact") }}</router-link>
+      <li
+      v-for="navItem in navItems"
+      :key="navItem.dest"
+      class="nav-item">
+        <router-link :to="navItem.dest" class="nav-link">
+          {{ navItem.name }}
+        </router-link>
       </li>
       <LocaleChanger />
     </ul>
@@ -31,6 +30,24 @@ import MobileMenu from '@/components/MobileMenu.vue';
 
 export default {
   name: 'Navbar',
+  data() {
+    return {
+      navItems: [
+        {
+          name: this.$t('navbar.about'),
+          dest: '/about',
+        },
+        {
+          name: this.$t('navbar.activities'),
+          dest: '/activities',
+        },
+        {
+          name: this.$t('navbar.contact'),
+          dest: '/contact',
+        },
+      ],
+    };
+  },
   components: {
     LocaleChanger,
     MobileMenu,
