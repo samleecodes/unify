@@ -18,7 +18,7 @@
           <button
           @click="setLanguage('zh')"
           class="locale-change-button">
-            ZH
+            中
           </button>
         </div>
       </div>
