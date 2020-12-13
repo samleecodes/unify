@@ -43,6 +43,8 @@ export default {
 
     .image {
       display: flex;
+      flex-direction: row;
+      align-items: flex-start;
       padding-top: $standard-padding;
 
       img {
