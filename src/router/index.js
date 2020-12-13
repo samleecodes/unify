@@ -4,6 +4,7 @@ import Index from '../views/Index.vue';
 import About from '../views/About.vue';
 import Activities from '../views/Activities.vue';
 import Welfare from '../views/Welfare.vue';
+import Contact from '../views/Contact.vue';
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/welfare',
     name: 'Welfare',
     component: Welfare,
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact,
   },
 ];
 

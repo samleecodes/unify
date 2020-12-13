@@ -27,6 +27,8 @@ export default {
 
   border-radius: 50px;
 
+  box-shadow: 0px 3px 10px 1px rgba(58, 4, 158, 0.6);
+
   font-size: $content-font-size;
   font-weight: 700;
 
