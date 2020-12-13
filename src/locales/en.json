@@ -1,6 +1,8 @@
 {
   "common": {
-    "search": "Search"
+    "slogan": "United we fly, Unify",
+    "search": "Search",
+    "wip": "Coming soon"
   },
   "navbar": {
     "home": "Home",
@@ -8,5 +10,9 @@
     "activities": "Activites",
     "contact": "Contact",
     "welfare": "Welfare"
+  },
+  "index": {
+    "intro": "We 12 members of Unify have a common philosophy and are determined to serve students with heart. We hope that we can hold a variety of activities for the students and to not lose the traditional activities of Kei Long. At the same time, we will do our best to express different aspirations of students. We also hope that we can use our enthusiasm to create an ideal campus life and a sense of belonging among students.",
+    "follow": "Follow us on <a class='color-anchor' href='https://instagram.com/cccklc_unify'>Instagram!</a>"
   }
 }
