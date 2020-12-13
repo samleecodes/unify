@@ -6,14 +6,14 @@
     <div v-if="!submitting && !submitted" class="contact-form-controls">
       <textarea
       v-model="messageInput"
-      placeholder="Your Message" />
-      <button type="submit">Submit</button>
+      :placeholder="$t('contact.yourMessage')" />
+      <button type="submit">{{ $t('contact.submit') }}</button>
     </div>
     <div v-if="submitting">
-      Submitting...
+      {{ $t('contact.submitting') }}
     </div>
     <div v-if="submitted">
-      Submitted! We've received your message!
+      {{ $t('contact.submitted') }}
     </div>
   </form>
 </template>
