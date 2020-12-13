@@ -64,8 +64,6 @@ export default {
   text-align: left;
   flex-direction: column-reverse !important;
 
-  background-color: rgb(197, 197, 197);
-
   @media only screen and (min-width: 750px) {
     flex-direction: row-reverse !important;
   }

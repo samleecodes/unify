@@ -2,15 +2,18 @@
   <div id="app">
     <Navbar />
     <router-view id="content-view"/>
+    <Footer id="footer" />
   </div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   components: {
     Navbar,
+    Footer,
   },
 };
 </script>
@@ -31,7 +34,21 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 #content-view {
+  flex: 1 0 auto;
   margin-top: 5rem;
+}
+
+#footer {
+  flex-shrink: 0;
 }
 </style>
