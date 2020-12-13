@@ -23,8 +23,6 @@ export default {
   background-color: #ffffff;
   box-shadow: 0 -3px 20px 5px rgba(0, 0, 0, 0.1);
 
-  clip-path: inset(-20px -20px 0 -20px);
-
   .footer-title {
     font-size: $large-font-size;
     font-weight: 700;
