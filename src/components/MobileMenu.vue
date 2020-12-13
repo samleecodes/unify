@@ -122,6 +122,8 @@ export default {
 
           text-decoration: none;
           color: #000000;
+
+          margin-bottom: $line-margin;
         }
       }
     }
