@@ -127,6 +127,10 @@ export default {
 
           margin-bottom: $line-margin;
         }
+
+        .router-link-exact-active {
+          color: rgb(209, 209, 209);
+        }
       }
     }
   }

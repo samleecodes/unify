@@ -89,6 +89,10 @@ export default {
 
   .nav-item {
     padding-left: $standard-padding;
+
+    .router-link-exact-active {
+      color: rgb(209, 209, 209);
+    }
   }
 
   .nav-item a {
@@ -100,6 +104,10 @@ export default {
     font-family: 'Butterfly' !important;
     font-size: $large-font-size;
     font-weight: 400;
+
+    .nav-brand-unify {
+      color: #000 !important;
+    }
   }
 
   .nav-link {

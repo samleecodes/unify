@@ -4,7 +4,7 @@
     <div class="container">
       <article>
         <h1>{{ $t('about.aboutTitle') }}</h1>
-        <p>{{ $t('index.intro') }}</p>
+        <p v-html="$t('about.aboutContent')"></p>
       </article>
       <article>
         <h1>{{ $t('about.membersTitle') }}</h1>
