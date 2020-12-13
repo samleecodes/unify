@@ -9,3 +9,28 @@
 
 	margin: 0 auto;
 }
+
+article {
+  padding: $standard-padding;
+
+  h1 {
+    font-size: $title-font-size;
+    margin-bottom: $line-margin;
+  }
+
+  p {
+    font-size: $content-font-size;
+    float: right;
+  }
+
+  img {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.color-anchor {
+  color: rgb(109, 43, 209);
+}
