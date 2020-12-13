@@ -1,4 +1,4 @@
-# unify
+# Unify Vue Website
 
 ## Project setup
 ```
