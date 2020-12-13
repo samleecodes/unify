@@ -3,30 +3,32 @@
     <font-awesome-icon
     id="mobile-menu-icon" @click="menuOpen = true"
     icon="bars" size="lg" />
-    <div v-if="menuOpen" class="mobile-menu-container">
-      <div class="mobile-menu">
-        <div class="mobile-menu-header">
-          <span class="mobile-menu-title">Menu</span>
-          <font-awesome-icon
-          id="mobile-menu-close-icon" @click="menuOpen = false"
-          icon="times" size="lg" />
-        </div>
-        <div class="mobile-menu-content">
-          <div
-          @click="menuOpen = false"
-          v-for="menuItem in menuItems"
-          :key="menuItem.dest"
-          class="mobile-menu-item">
-            <router-link
-            :to="menuItem.dest"
-            class="mobile-menu-item-link">
-              {{ menuItem.name }}
-            </router-link>
-            <hr class="mobile-menu-item-seperator" />
+    <transition name="slide-rev">
+      <div v-if="menuOpen" class="mobile-menu-container">
+        <div class="mobile-menu">
+          <div class="mobile-menu-header">
+            <span class="mobile-menu-title">Menu</span>
+            <font-awesome-icon
+            id="mobile-menu-close-icon" @click="menuOpen = false"
+            icon="times" size="lg" />
+          </div>
+          <div class="mobile-menu-content">
+            <div
+            @click="menuOpen = false"
+            v-for="menuItem in menuItems"
+            :key="menuItem.dest"
+            class="mobile-menu-item">
+              <router-link
+              :to="menuItem.dest"
+              class="mobile-menu-item-link">
+                {{ menuItem.name }}
+              </router-link>
+              <hr class="mobile-menu-item-seperator" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </transition>
   </li>
 </template>
 

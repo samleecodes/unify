@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Navbar />
-    <router-view id="content-view"/>
+    <transition name="slide" mode="out-in">
+      <router-view id="content-view"/>
+    </transition>
     <Footer id="footer" />
   </div>
 </template>
@@ -42,5 +44,81 @@ export default {
 
 #content-view {
   margin-top: 5rem;
+}
+
+.slide-enter-active {
+  animation: slide-in .3s;
+}
+
+.slide-leave-active {
+  animation: slide-out .3s;
+}
+
+.slide-rev-enter-active {
+  animation: slide-in-rev .3s;
+}
+
+.slide-rev-leave-active {
+  animation: slide-out-rev .3s;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-rev {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+
+@keyframes slide-out-rev {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+.list-complete-item {
+  transition: all 1s;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.list-complete-enter, .list-complete-leave-to
+/* .list-complete-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.list-complete-leave-active {
+  position: absolute;
 }
 </style>

@@ -46,6 +46,8 @@ export default {
   flex-direction: column;
   padding: $standard-padding;
 
+  transition: all 1s;
+
   .welfare-item-image-container {
     img {
       width: 100%;
