@@ -19,5 +19,11 @@
     "aboutTitle": "About Unify",
     "manifestoTitle": "Manifesto",
     "enlarge": "Enlarge"
+  },
+  "contact": {
+    "yourMessage": "Your message",
+    "submit": "Submit",
+    "submitting": "Submitted",
+    "submitted": "Successfully submitted your message!"
   }
 }
