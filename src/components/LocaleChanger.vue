@@ -10,7 +10,16 @@
           選擇你的語言
         </span>
         <div class="locale-changer-control">
-          control
+          <button
+          @click="setLanguage('en')"
+          class="locale-change-button">
+            EN
+          </button>
+          <button
+          @click="setLanguage('zh')"
+          class="locale-change-button">
+            ZH
+          </button>
         </div>
       </div>
     </div>
@@ -24,6 +33,12 @@ export default {
     return {
       dialogOpen: false,
     };
+  },
+  methods: {
+    setLanguage(lang) {
+      localStorage.setItem('lang', lang);
+      window.location.reload();
+    },
   },
 };
 </script>
@@ -61,6 +76,29 @@ export default {
       font-weight: 700;
       margin: $standard-margin;
       text-align: center;
+    }
+
+    .locale-changer-control {
+      display: flex;
+      flex-direction: column;
+      // margin: $standard-margin;
+
+      .locale-change-button {
+        font-size: $content-font-size;
+        font-weight: 500;
+        padding: 1rem 8rem;
+        margin-bottom: 2rem;
+        outline: none;
+        border: 2px solid #000000;
+        background-color: #ffffff;
+        transition: all 0.5s;
+        cursor: pointer;
+      }
+
+      .locale-change-button:hover {
+        background-color: #5c5c5c;
+        color: #ffffff;
+      }
     }
   }
 }
