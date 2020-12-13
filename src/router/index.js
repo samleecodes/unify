@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Index from '../views/Index.vue';
 import About from '../views/About.vue';
 import Activities from '../views/Activities.vue';
+import Welfare from '../views/Welfare.vue';
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/activities',
     name: 'Activities',
     component: Activities,
+  },
+  {
+    path: '/welfare',
+    name: 'Welfare',
+    component: Welfare,
   },
 ];
 
