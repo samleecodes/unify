@@ -3,9 +3,15 @@
     <ImageHeader :title="$t('navbar.welfare')" />
     <div class="vertical-content-flow">
       <div class="container">
+        <div class="search-input-container">
+          <input
+          v-model="searchQuery"
+          class="search-input"
+          placeholder="Search" />
+        </div>
         <Loader v-if="loading" />
         <WelfareItem
-        v-for="welfareItem in welfareEntries"
+        v-for="welfareItem in filteredWelfareEntries"
         :welfareObject="welfareItem"
         :key="welfareItem.id" />
       </div>
@@ -23,7 +29,9 @@ export default {
   name: 'Welfare',
   data() {
     return {
+      searchQuery: '',
       welfareEntries: [],
+      filteredWelfareEntries: [],
       loading: false,
     };
   },
@@ -41,12 +49,57 @@ export default {
         .get()
         .then((snapshot) => {
           this.welfareEntries = snapshot.docs;
+          this.filteredWelfareEntries = this.welfareEntries;
           this.loading = false;
         });
+    },
+
+    search() {
+      if (this.searchQuery === '') {
+        this.filteredWelfareEntries = this.welfareEntries;
+        return;
+      }
+
+      // OMGGG!
+      // Linear searching madness
+      const searchedArray = [];
+      this.welfareEntries.forEach((welfareItem) => {
+        if (welfareItem.data().title.toLowerCase()
+          .includes(this.searchQuery.toLowerCase())) {
+          searchedArray.push(welfareItem);
+        } else if (welfareItem.data().description.toLowerCase()
+          .includes(this.searchQuery.toLowerCase())) {
+          searchedArray.push(welfareItem);
+        }
+      });
+
+      this.filteredWelfareEntries = searchedArray;
     },
   },
   mounted() {
     this.loadWelfareEntries();
   },
+  watch: {
+    searchQuery() {
+      this.search();
+    },
+  },
 };
 </script>
+
+<style lang="scss">
+.search-input-container {
+  padding:  $standard-padding
+            $standard-padding
+            $small-padding
+            $standard-padding;
+  width: 100%;
+
+  .search-input {
+    width: 100%;
+    padding: $line-padding;
+    border: 1px solid #000;
+    border-radius: 5px;
+  }
+}
+</style>
