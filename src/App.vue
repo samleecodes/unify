@@ -54,10 +54,29 @@ export default {
   animation: slide-out .3s;
 }
 
+.slide-rev-enter-active {
+  animation: slide-in-rev .3s;
+}
+
+.slide-rev-leave-active {
+  animation: slide-out-rev .3s;
+}
+
 @keyframes slide-in {
   0% {
     opacity: 0;
     transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-rev {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
   }
   100% {
     opacity: 1;
@@ -73,6 +92,17 @@ export default {
   100% {
     opacity: 0;
     transform: translateY(100px);
+  }
+}
+
+@keyframes slide-out-rev {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
   }
 }
 
