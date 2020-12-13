@@ -10,10 +10,12 @@
           :placeholder="$t('common.search')" />
         </div>
         <Loader v-if="loading" />
-        <WelfareItem
-        v-for="welfareItem in filteredWelfareEntries"
-        :welfareObject="welfareItem"
-        :key="welfareItem.id" />
+        <transition-group name="list-complete">
+          <WelfareItem
+          v-for="welfareItem in filteredWelfareEntries"
+          :welfareObject="welfareItem"
+          :key="welfareItem.id" />
+        </transition-group>
       </div>
     </div>
   </div>
