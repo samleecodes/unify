@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import firebase from 'firebase';
 import ImageHeader from '@/components/ImageHeader.vue';
 import WelfareItem from '@/components/WelfareItem.vue';
 import Loader from '@/components/Loader.vue';
+import firebase from 'firebase/app';
 
 export default {
   name: 'Welfare',
