@@ -8,6 +8,9 @@
         <a class="footer-link color-anchor" href="https://instagram.com/cccklc_unify">Instagram</a>
         <a class="footer-link color-anchor" href="https://www.keilong.edu.hk/">School Website</a>
       </div>
+      <div class="footer-footer">
+        <small>Version {{ versionCode }}</small>
+      </div>
     </div>
   </div>
 </template>
@@ -15,13 +18,17 @@
 <script>
 export default {
   name: 'Footer',
+  data() {
+    return {
+      versionCode: '1.0.0',
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .footer {
   background-color: #ffffff;
-  box-shadow: 0 -3px 20px 5px rgba(0, 0, 0, 0.1);
 
   .footer-title {
     font-size: $large-font-size;
@@ -40,6 +47,10 @@ export default {
       font-weight: 700;
       margin-bottom: $small-margin;
     }
+  }
+
+  .footer-footer {
+    padding: 0 $standard-padding $standard-padding $standard-padding;
   }
 }
 </style>
