@@ -38,6 +38,7 @@ export default {
         .collection('messages')
         .add({
           message: this.messageInput,
+          createdAt: firebase.firestore.Timestamp.now(),
         })
         .then(() => {
           this.submitted = true;
