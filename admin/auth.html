@@ -3,27 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    * {
-      font-family: sans-serif;
-    }
-  </style>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
   <title>Unify Admin Panel</title>
 </head>
 <body>
-  <h1>Unify Admin Panel</h1>
-  <div id="app">
-    <div id="auth">
-      <p id="auth-status">Loading...</p>
-      <button onclick="logout()">Logout</button>
-    </div>
-  </div>
+  <!-- UI will be mounted here -->
+  <div id="firebaseui-auth-container"></div>
 
   <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
 
   <script>
-    // Initialize Firebase
+    // Initialize Firebase SDK
     var firebaseConfig = {
       apiKey: "AIzaSyCXAweowKUFXrZfUHndSedYPVrjiJbHNmA",
       authDomain: "unify-website-13.firebaseapp.com",
@@ -34,10 +26,19 @@
       appId: "1:527529378053:web:d1567b3b62657d0e08376c",
       measurementId: "G-F18MHYC1L7"
     };
-
     firebase.initializeApp(firebaseConfig);
   </script>
 
-  <script src="index.js"></script>
+  <script>
+    // Initialize Firebase Auth UI
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    ui.start('#firebaseui-auth-container', {
+      signInOptions: [
+        firebase.auth.EmailAuthProvider.PROVIDER_ID
+      ],
+      signInSuccessUrl: '/',
+    });
+  </script>
+
 </body>
 </html>
