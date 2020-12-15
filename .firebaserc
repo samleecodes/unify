@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "unify-website-13"
+  },
+  "targets": {
+    "unify-website-13": {
+      "hosting": {
+        "prod": [
+          "unify-website-13"
+        ],
+        "admin": [
+          "admin-unify-website-13"
+        ]
+      }
+    }
   }
 }
