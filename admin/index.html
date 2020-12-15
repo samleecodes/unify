@@ -7,10 +7,65 @@
     * {
       font-family: sans-serif;
     }
+
+    table, tr, th, td {
+      border: 1px solid #000;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+    }
   </style>
   <title>Unify Admin Panel</title>
 </head>
 <body>
   <h1>Unify Admin Panel</h1>
+  <div id="app">
+    <section id="auth">
+      <h2>Authentication</h2>
+      <p id="auth-status">Loading...</p>
+      <button onclick="logout()">Logout</button>
+    </section>
+
+    <section id="messages">
+      <h2>Messages</h2>
+      <table id="message-table">
+        <tbody id="message-table-body">
+          <tr>
+            <th>Message</th>
+            <th>Timestamp</th>
+          </tr>
+          <tr id="message-table-loading">
+            <th colspan="2">Loading...</th>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <button onclick="loadMessages()">Reload</button>
+    </section>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-firestore.js"></script>
+
+  <script>
+    // Initialize Firebase
+    var firebaseConfig = {
+      apiKey: "AIzaSyCXAweowKUFXrZfUHndSedYPVrjiJbHNmA",
+      authDomain: "unify-website-13.firebaseapp.com",
+      databaseURL: "https://unify-website-13.firebaseio.com",
+      projectId: "unify-website-13",
+      storageBucket: "unify-website-13.appspot.com",
+      messagingSenderId: "527529378053",
+      appId: "1:527529378053:web:d1567b3b62657d0e08376c",
+      measurementId: "G-F18MHYC1L7"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="index.js"></script>
 </body>
 </html>
