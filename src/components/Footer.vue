@@ -20,7 +20,7 @@ export default {
   name: 'Footer',
   data() {
     return {
-      versionCode: '1.0.1',
+      versionCode: '1.0.2',
     };
   },
 };
